@@ -1,0 +1,40 @@
+﻿@model MVCMovies.Models.reviews
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>reviews</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.MovID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.MovID)
+        </dt>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RevID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
